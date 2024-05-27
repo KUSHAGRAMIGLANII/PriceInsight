@@ -1,2 +1,2 @@
 # Laptop-price-prediction-app
-It predicts the estimate prices of different types of laptops 
+It predicts the approximate prices of different types of laptops 
