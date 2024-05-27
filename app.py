@@ -21,26 +21,25 @@ ssd=st.selectbox('SSD(in GB)',[0,128,256,512,1024])
 gpu=st.selectbox('GPU',df['Gpu brand'].unique())
 os=st.selectbox('OS',df['os'].unique())
 if(st.button('Predict Price')):
-    pass
-ppi=None
-if touchscreen=='Yes' :
-    touchscreen=1
-
-else :
-    touchscreen=0
-
-if ips=='Yes':
-    ips=1
-else:
-    ips=0   
-
-X_res=int(resolution.split('x')[0])
-Y_res=int(resolution.split('x')[1])
-try:
-   ppi=((X_res**2) +(Y_res**2))**0.5/screen_size
-   query=np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
-   query=query=query.reshape(1,12)
-   st.title("The predicted price is " +str(int(np.exp(pipe.predict(query)[0]))))
-except:
-    print("The screen size cannot be zero")
+    ppi=None
+    if touchscreen=='Yes' :
+        touchscreen=1
+    
+    else :
+        touchscreen=0
+    
+    if ips=='Yes':
+        ips=1
+    else:
+        ips=0   
+    
+    X_res=int(resolution.split('x')[0])
+    Y_res=int(resolution.split('x')[1])
+    try:
+       ppi=((X_res**2) +(Y_res**2))**0.5/screen_size
+       query=np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
+       query=query=query.reshape(1,12)
+       st.title("The predicted price is " +str(int(np.exp(pipe.predict(query)[0]))))
+    except:
+        print("The screen size cannot be zero")
 
