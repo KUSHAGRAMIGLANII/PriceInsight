@@ -1,2 +1,2 @@
-# Laptop-price-prediction-app
-It predicts the approximate prices of different types of laptops 
+# PriceInsight
+It is an advanced price prediction model utilizing a range of machine learning algorithms like Ridge Regression, Lasso Regression, Linear Regression, Random Forest, AdaBoost, SVM, and KNN. Developed in Python, it features comprehensive data processing with Pandas and NumPy, handling feature selection, null value management, and insightful feature extraction. The model incorporates visualizations such as bar plots, distance plots, and heatmaps using Matplotlib and Seaborn for in-depth data analysis. Its implementation ensures accurate price predictions through meticulous algorithmic selection and feature engineering.
