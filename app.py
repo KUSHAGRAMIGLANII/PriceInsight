@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 # import sklearn
 # print(sklearn.__version__)
-pipe=pickle.load(open('pipe.pkl','rb'));
+pipe=pickle.load(open('pipe (2).pkl','rb'));
 df=pickle.load(open('df.pkl','rb'));
 
 st.title("Laptop Predictor")
